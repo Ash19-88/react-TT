@@ -1,0 +1,35 @@
+header {
+    background-color: #f3e8d5;
+    color: white;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  display: flex;
+  }
+  .headerSection {
+    color: #d39865;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .clothing {
+    margin-top: -10px;
+    color: #d39865;
+    letter-spacing: 3px;
+    font-size: large;
+    font-family: "Dancing Script", cursive;
+  }
+
+  .headerTitle {
+    color: #d39865;
+    font-weight:600;
+    font-family: "Kavivanar";
+    letter-spacing: 2px;
+    font-style: normal;
+    padding-top: 25px;
+  }
