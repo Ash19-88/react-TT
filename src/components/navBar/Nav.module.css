@@ -1,0 +1,54 @@
+.nav {
+    background-color: #d39865;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+  }
+  
+  /* Personalización del toggler */
+  .navbarToggler {
+    z-index: 1050; /* Mayor que el z-index del carousel para prevenor efecto indeseado*/
+    box-shadow: none;
+    border: #f3e8d5 1px solid !important;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 1px rgba(250, 249, 248, 0.466) !important;
+  }
+  .navbar-toggler-icon {
+    font-size: medium !important;
+  }
+  
+  
+  /* Estilos para la lista de navegación */
+  .navList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin: auto;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 992px) {
+    .navList {
+      padding: 1rem 0;
+      gap: 0;
+    }
+    
+    .navList .nav-item {
+      width: 100%;
+      text-align: center;
+    }
+  }
