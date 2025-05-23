@@ -1,7 +1,18 @@
 import { Link } from "react-router-dom";
 import styles from "./Cart.module.css";
 
-const Cart = () => {
+const Cart = ({ items, setItems }) => {
+  const total = items.reduce(
+    (acc, item) => acc + item.price * (item.quantity || 1),
+    0
+  );
+
+  const clearCart = (id) => {
+    const updatedCart = items.filter((item) => item.id !== id);
+    setItems(updatedCart);
+    localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+  };
+
   return (
     <div className={styles.mainCartContainer}>
       <div className="container text-center my-5">
@@ -16,16 +27,26 @@ const Cart = () => {
                 <th scope="col"></th>
               </tr>
             </thead>
-            <tbody id="cart-items"></tbody>
+            {items.map((item, index) => (
+              <tr key={index}>
+                <td>{item.title}</td>
+                <td>${item.price}</td>
+                <td>{item.quantity || 1}</td>
+                <td>${item.price * (item.quantity || 1)}</td>
+                <td>
+                  <button onClick={() => clearCart(item.id)}>Eliminar</button>
+                </td>
+              </tr>
+            ))}
           </table>
           <h3 className={styles.totalBox}>
-            Total: $<span id="cart-total">0.00</span>
+            Total: $<span id="cart-total">{total.toFixed(2)}</span>
           </h3>
           <div className={styles.cartSummary}>
             <button id="checkout-button" className={styles.checkoutButton}>
               Pagar
             </button>
-            <Link to="shop.html" className={styles.keepShoppingButton}>
+            <Link to="/shop" className={styles.keepShoppingButton}>
               <i className="fas fa-chevron-left"></i>
               Seguir Comprando
             </Link>

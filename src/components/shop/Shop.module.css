@@ -17,6 +17,7 @@
 .productsTitle {
   font-family: "Playfair Display", serif;
   color: #d39865;
+  margin-bottom: 24px;
 }
 .apiProductsContainer {
   display: grid;
