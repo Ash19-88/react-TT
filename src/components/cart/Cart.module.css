@@ -4,7 +4,6 @@
   flex-direction: column;
   justify-content: center;
 }
-
 .cartContainer {
   border: #ffc695 1.5px solid;
   border-radius: 15px;
@@ -14,12 +13,19 @@
   width: 80%;
   margin: auto;
 }
+.cartTitle{
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #d39865;
+  padding-bottom: 24px;
+}
 
-.productCart img {
+.productCartImage {
   max-width: 100%;
   object-fit: contain;
   max-height: min-content;
-  height: 30vh;
+  height: 18vh;
   background-color: transparent;
 }
 .totalBox {
@@ -58,29 +64,24 @@
   border-color: #b2824d;
 }
 .keepShoppingButton {
-  border: 1.5px solid #d39865;
-  background-color: transparent;
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
   color: #d39865;
-  border-radius: 25px;
-  padding: 8px 50px;
+  padding: 18px 30px;
   text-decoration: none;
 }
 .keepShoppingButton:hover {
-  background-color: #b2824d;
-  border-color: #b2824d;
-  color: white;
+  color: #c97e3c;
 }
 
-.table th,
-.table td {
+.tableHead,
+.tableData {
   vertical-align: middle;
   text-align: center;
 }
 
-.table .formControl {
-  width: 60px;
-  margin: 0 auto;
-}
+
 .productCart {
   display: flex;
   justify-content: center;
@@ -89,24 +90,83 @@
   text-align: center;
   gap: 8px;
 }
-.productCart h2 {
-  font-size: 1.2rem;
+.productCartTitle {
+  font-size: 1rem;
   width: 60%;
   margin: 10px 0 0;
   text-align: center;
-}
-.cartTitle {
-  color: black;
-  font-family: "Playfair Display", serif;
+  font-family: "Montserrat", sans-serif;
+  color: #2b2a2a;
 }
 
-.description {
-  font-size: medium;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: rgb(100, 100, 100);
-  text-align: center;
-  margin: auto;
-  max-width: 80%;
-  margin: 0 auto;
+.trashButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.trashButton:hover {
+  color: #b2824d;
+  transform: scale(1.1);
+}
+.cartContainer table {
+  border-collapse: collapse;
+}
+
+.cartItem td {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 8px;
+}
+
+.cartItem:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .cartContainer {
+    width: 90%;
+  }
+  .cartSummary {
+    width:80%;
+  }
+  .productCartImage {
+    height: 15vh;
+  }
+  .productCartTitle {
+  font-size: 0.8rem;
+  width: 100%;
+  margin: 5px 0 0;
+
+}
+.tableHead{
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.tableData{
+  font-size: 0.8rem;}
+}
+
+@media (max-width: 400px) {
+  .cartContainer {
+    width: 90%;
+  }
+  .cartSummary {
+    width:90%;
+  }
+  .productCartImage {
+    height: 15vh;
+  }
+  .productCartTitle {
+  font-size: 0.6rem;
+  width: 100%;
+  margin: 5px 0 0;
+
+}
+.tableHead{
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+.tableData{
+  font-size: 0.8rem;}
 }
