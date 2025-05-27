@@ -1,0 +1,39 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #faf4f0;
+  color: #3a2e25;
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 8rem;
+  font-weight: bold;
+  margin: 0;
+  color: #a0522d;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2c1b0c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #3e2a16;
+}

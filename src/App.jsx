@@ -14,6 +14,7 @@ import ProductDetails from "./components/product/ProductDetails";
 import Login from "./components/login/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Admin from "./components/admin/Admin";
+import NotFound from "./components/notfound/NotFound";
 
 function App() {
   const [items, setItems] = useState(() => {
@@ -108,6 +109,7 @@ function App() {
             />
           }
         />
+         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <ToastContainer
