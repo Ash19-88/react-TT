@@ -3,8 +3,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: f2a65a;
-
 }
 
 .productsContainer {
@@ -19,6 +17,7 @@
   color: #d39865;
   margin-bottom: 24px;
 }
+
 .apiProductsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -39,30 +38,41 @@
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .productCard:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-.productCard img {
+.productImage {
   max-width: 100%;
   object-fit: contain;
-  max-height: 300px;
+  max-height: 180px;
+  max-width: 180px;
   background-color: transparent;
+  margin: 0 auto;  
 }
 
-.productCard h2 {
-  font-size: 1.5em;
-  margin: 10px 0;
-  font-family: "Playfair Display", serif;
-}
-
-.productCard .price {
+ .price {
   font-size: 1.3em;
   color: #d39865;
   font-family: "Playfair Display", serif;
 }
 
+.productTitle{
+  font-size: 1.2em;
+  margin: 10px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.productButtons{
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
 .productCard .shopButton {
   background-color: #d39865;
   color: white;
@@ -70,7 +80,6 @@
   padding: 10px;
   cursor: pointer;
   border-radius: 1px;
-  font-family: "Playfair Display", serif;
 }
 
 .productCard .shopButton:hover {
@@ -79,12 +88,12 @@
 
 .productCard .viewDescription {
   color: #d39865;
-  border: 1px solid #d39865;
+  border: none;
   background-color: white;
   padding: 10px;
   cursor: pointer;
   border-radius: 1px;
-  font-family: "Playfair Display", serif;
+   font-family: "Montserrat", sans-serif;
 }
 
 .viewDescription{

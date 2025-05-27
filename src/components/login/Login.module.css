@@ -1,0 +1,19 @@
+.mainCartContainer{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginButton {
+  background-color: #d39865;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 1px;
+}
+
+.loginButton:hover {
+  background-color: #b2824d;
+}

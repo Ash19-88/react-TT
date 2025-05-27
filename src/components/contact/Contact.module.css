@@ -1,0 +1,60 @@
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: f2a65a;
+}
+.contactContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.contactTitle {
+  font-family: "Playfair Display", serif;
+  color: #d39865;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  font-weight: lighter;
+  color: #d39865;
+}
+
+.submitButton {
+  background-color: #d39865;
+  border-color: #d39865;
+  color: white;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.submitButton:hover {
+  background-color: #b2824d;
+  border-color: #b2824d;
+  color: white;
+}
+.mapContainer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.mapEmbed {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contactContainer {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+  .mapTitle,
+  .mapContainer {
+    display: none;
+  }
+}

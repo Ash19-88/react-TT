@@ -1,0 +1,40 @@
+.aboutContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+.aboutTitle{
+    font-family: "Playfair Display", serif;
+    color: #d39865;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.aboutDescription {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.valuesTitle{
+    font-family: "Playfair Display", serif;
+    color: #7e5e42;
+    text-align: center;
+}
+
+.valuesSection {
+    margin-top: 30px;
+  }
+  
+  .valueItem {
+    background-color: #fdfdfdc2;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .valueItem h4 {
+    color: #d39865;
+  }

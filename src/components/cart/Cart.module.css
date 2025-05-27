@@ -122,7 +122,13 @@
 .cartItem:last-child td {
   border-bottom: none;
 }
-
+.quantityButton{
+  border:none;
+  color: #d39865;
+  border-radius: 8px;
+  margin: 0 3px;
+  background-color: transparent;
+}
 @media (max-width: 768px) {
   .cartContainer {
     width: 90%;
@@ -155,7 +161,7 @@
     width:90%;
   }
   .productCartImage {
-    height: 15vh;
+    height: 10vh;
   }
   .productCartTitle {
   font-size: 0.6rem;
