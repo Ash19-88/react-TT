@@ -1,11 +1,11 @@
 import React from "react";
-import "./Footer.module.css"; // Import the CSS file for styling
+import styles from "./Footer.module.css"; 
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <p>
-        &copy; <span id="year"></span> Ash Market{" "}
+        &copy; <span>{new Date().getFullYear()}</span> Ash Market{" "}
         <span>- All rights reserved</span>
       </p>
     </footer>
