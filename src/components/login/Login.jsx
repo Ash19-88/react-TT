@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import styles from "./Login.module.css"; // Assuming you have a CSS module for styles
+import styles from "./Login.module.css"; 
+import { useAuth } from "../../hooks/useAuth";
 
-const Login = ({ login }) => {
+const Login = () => {
+  const { login } = useAuth(); // 
+
   const navigate = useNavigate();
 
   const handleLogin = () => {

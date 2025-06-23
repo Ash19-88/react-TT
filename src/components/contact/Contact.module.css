@@ -24,17 +24,16 @@ main {
 }
 
 .submitButton {
-  background-color: #d39865;
-  border-color: #d39865;
-  color: white;
+  background-color: #d39865!important;
+  border-color: #d39865!important;
+  color: white!important;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 15px!important;
 }
 
 .submitButton:hover {
-  background-color: #b2824d;
-  border-color: #b2824d;
-  color: white;
+  background-color: #b2824d!important;
+  border-color: #b2824d!important;
 }
 .mapContainer {
   margin-top: 40px;

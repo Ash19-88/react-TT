@@ -41,7 +41,7 @@ const Contact = () => {
             ></textarea>
           </div>
 
-          <button type="submit" className={`btn ${styles.submitButton}`}>
+          <button type="submit" className={`btn ${styles.submitButton} `}>
             Enviar Mensaje
           </button>
         </form>

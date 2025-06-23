@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Shop.module.css";
 import { FaCartPlus } from "react-icons/fa6";
-import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../../hooks/useCart";
 
-const Shop = ({ addToCart }) => {
+const Shop = () => {
+  const { addToCart } = useCart(); 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -80,7 +81,7 @@ const Shop = ({ addToCart }) => {
                       className={styles.shopButton}
                       onClick={() => {
                         addToCart(product);
-                        toast.success("Producto agregado al carrito 🛒");
+                       
                       }}
                       title="Agregar al carrito"
                     >
