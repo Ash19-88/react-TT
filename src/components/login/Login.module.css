@@ -1,19 +1,66 @@
-.mainCartContainer{
-  flex: 1;
+.mainContainer {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff8f1;
+}
+.centerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.loginForm {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 16px;
+  align-items: center;
+  margin-top: 24px;
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(211, 152, 101, 0.08);
+}
+
+.input {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #d39865;
+  width: 220px;
+  font-size: 1rem;
+  background: #fff8f1;
+  transition: border 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid #b2824d;
 }
 
 .loginButton {
   background-color: #d39865;
+  padding: 8px 32px;
   color: white;
   border: none;
-  padding: 10px;
   cursor: pointer;
-  border-radius: 1px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.2s;
 }
 
 .loginButton:hover {
   background-color: #b2824d;
+}
+
+.error {
+  color: #b22222;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  background: #ffe5e5;
+  padding: 6px 12px;
+  border-radius: 6px;
 }

@@ -54,3 +54,50 @@
       text-align: center;
     }
   }
+
+  .icon {
+    vertical-align: middle;
+    font-size: 1.1em;
+    margin-right: 6px;
+    transition: color 0.2s;
+  }
+
+  .navList li a,
+  .navList li button {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    color: #fff;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .navList li a:hover,
+  .navList li a:focus,
+  .navList li button:hover,
+  .navList li button:focus {
+    color: #ffd6a0;
+    outline: none;
+  }
+
+  .btnLogout {
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    transition: color 0.2s;
+  }
+
+  .btnLogout:hover,
+  .btnLogout:focus {
+    color: #e84545;
+  }

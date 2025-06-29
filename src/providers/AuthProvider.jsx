@@ -1,24 +1,26 @@
 import { useState } from "react";
 import AuthContext from "../context/AuthContext";
 
-
 export default function AuthProvider({ children }) {
-    const [isAuthenticated, setIsAuthenticated] = useState(() => {
-    return localStorage.getItem("isAuthenticated") === "true";
+  const [user, setUser] = useState(() => {
+    const stored = localStorage.getItem("user");
+    return stored ? JSON.parse(stored) : null;
   });
 
-  const login = () => {
-    setIsAuthenticated(true);
-    localStorage.setItem("isAuthenticated", "true");
+  const login = (userData) => {
+    setUser(userData);
+    localStorage.setItem("user", JSON.stringify(userData));
   };
 
   const logout = () => {
-    setIsAuthenticated(false);
-    localStorage.removeItem("isAuthenticated");
+    setUser(null);
+    localStorage.removeItem("user");
   };
 
+  const isAuthenticated = !!user;
+
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, user, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

@@ -1,37 +1,60 @@
 # Ash Market 🛍️
 
-Este es un proyecto integrador desarrollado con **Vite** y **React**, que representa una tienda online ficticia llamada **Ash Market**. El sitio es completamente responsivo y fue construido utilizando **React**, **React Router**, **CSS Modules**, **React Icons** y **Bootstrap** para lograr una interfaz moderna, clara y adaptable a distintos dispositivos.
+Proyecto final de React: **Ash Market**  
+Tienda online ficticia desarrollada con **Vite**, **React**, **React Router**, **CSS Modules**, **React Icons** y **Bootstrap**.  
+Incluye panel de administración, integración con dos APIs, carrito persistente, búsqueda, paginación, formularios y diseño completamente responsivo.
 
-## 🚀 Características
+---
 
-- **Diseño Responsivo**: Adaptado para funcionar correctamente en dispositivos móviles, tablets y pantallas de escritorio.
-- **React + Vite**: Estructura basada en componentes reutilizables, navegación mediante React Router y rendimiento optimizado con Vite.
-- **CSS Modules**: Estilos locales y organizados por componente.
-- **React Icons**: Iconografía moderna y personalizable directamente desde React.
-- **Bootstrap**: Utilizado para estructura base y componentes visuales.
-- **Formulario de Contacto**: Funciona a través de [Formspree](https://formspree.io/) para enviar mensajes fácilmente desde el frontend.
-- **Página 404 personalizada**: Sección visualmente atractiva para rutas no válidas.
+## 🚀 Características Principales
 
-## 🧱 Estructura del Proyecto
-
-- **Navbar**: Barra de navegación con íconos, enlaces y responsiva.
-- **Home**: Página de inicio con contenido destacado.
-- **Tienda**: Lista de productos ficticios con imagen, precio y botón para agregar al carrito.
-- **Carrito de Compras**: Página que muestra los productos agregados, con opción para eliminarlos. El estado del carrito se guarda en **localStorage**, lo que permite conservar los productos al recargar la página o cerrar el navegador.
-- **Sobre Nosotros**: Información institucional de la tienda.
-- **Contacto**: Formulario funcional con integración a Formspree.
+- **Diseño 100% Responsivo**: Adaptado para móviles, tablets y escritorio.
+- **Navbar**: Barra de navegación con íconos, enlaces, menú hamburguesa y cierre automático en mobile.
+- **Home**: Página de inicio con presentación visual y CTA.
+- **Tienda (Shop)**:
+  - Productos de dos fuentes (FakeStoreAPI y MockAPI).
+  - Búsqueda en tiempo real por nombre.
+  - Paginación.
+  - Botón para ver detalles y agregar al carrito.
+  - Mensaje claro si no hay resultados.
+- **Detalle de Producto**:
+  - Imagen, descripción, precio y controles de cantidad.
+  - Si el producto está en el carrito, muestra contador (+/-) para modificar cantidad o eliminar.
+  - Botón "Agregar al carrito" si no está en el carrito.
+  - Totalmente responsivo y accesible.
+- **Carrito de Compras**:
+  - Lista de productos agregados, con controles para aumentar/disminuir cantidad o eliminar.
+  - Total actualizado en tiempo real.
+  - Persistencia en **localStorage**.
+  - Botón para vaciar carrito y para pagar (con feedback visual).
+- **Panel de Administración**:
+  - Listado de productos con búsqueda por nombre.
+  - Paginación.
+  - Agregar, editar y eliminar productos (con modales y toasts de confirmación).
+  - Formularios validados.
+  - Solo accesible para usuarios admin.
+- **Sobre Nosotros**: Información institucional.
+- **Contacto**: Formulario funcional con integración a [Formspree](https://formspree.io/).
 - **Footer**: Pie de página con información básica.
-- **Página 404**: Vista para rutas no encontradas.
+- **Página 404 personalizada**: Para rutas no válidas.
+- **Accesibilidad**: Uso de `aria-label`, roles y feedback visual en botones e íconos.
+- **Toasts**: Notificaciones visuales para acciones importantes (agregar, editar, eliminar, pagar, etc).
+
+---
 
 ## 🛠️ Tecnologías Utilizadas
 
 - **Vite**: Empaquetador moderno para desarrollo rápido.
 - **React**: Biblioteca para construir interfaces basadas en componentes.
-- **React Router DOM**: Para navegación de múltiples páginas.
+- **React Router DOM**: Navegación multipágina.
 - **Bootstrap**: Sistema de diseño rápido y responsivo.
 - **React Icons**: Librería de íconos para React.
 - **CSS Modules**: Estilos encapsulados por componente.
-- **Formspree**: Herramienta externa para enviar formularios sin backend.
+- **Formspree**: Envío de formularios sin backend.
+- **React Toastify**: Notificaciones visuales.
+- **APIs**: [FakeStoreAPI](https://fakestoreapi.com/) y [MockAPI](https://mockapi.io/).
+
+---
 
 ## ▶️ Instalación y Uso Local
 
@@ -53,14 +76,21 @@ npm run dev
 ```
 La aplicación se abrirá en http://localhost:5173 (puede variar según tu configuración).
 
-🌐 Deploy
-Este proyecto está desplegado en Netlify:
+---
+
+## 🌐 Deploy
+
+Este proyecto está desplegado en Netlify:  
 🔗 https://ashmarket-react.netlify.app
 
-⚠️ Nota: En Netlify, si actualizás una ruta interna (por ejemplo, /contact), puede mostrar error 404. Para evitar esto, creá un archivo _redirects dentro de public/ con el siguiente contenido:
-```bash
+⚠️ **Nota:** En Netlify, si actualizás una ruta interna (por ejemplo, /contact), puede mostrar error 404.  
+Para evitar esto, creá un archivo `_redirects` dentro de `public/` con el siguiente contenido:
+```
 /*    /index.html   200
 ```
 Esto asegura que cualquier ruta se redirija correctamente a React Router.
 
-¡Gracias por visitar Ash Market! 💕
+---
+
+¡Gracias por visitar Ash Market! 💕  
+Trabajo final para el curso de React.

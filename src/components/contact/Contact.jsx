@@ -10,6 +10,7 @@ const Contact = () => {
           id="contact-form"
           action="https://formspree.io/f/xanyjlan"
           method="POST"
+          role="form"
         >
           <div className={`form-group ${styles.formGroup}`}>
             <label htmlFor="name">Nombre</label>
@@ -18,16 +19,22 @@ const Contact = () => {
               className={`form-control ${styles.formControl}`}
               id="name"
               name="name"
+              required
+              aria-required="true"
+              autoComplete="name"
             />
           </div>
 
-           <div className={`form-group ${styles.formGroup}`}>
+          <div className={`form-group ${styles.formGroup}`}>
             <label htmlFor="email">Correo Electrónico</label>
             <input
               type="email"
               className={`form-control ${styles.formControl}`}
               id="email"
               name="email"
+              required
+              aria-required="true"
+              autoComplete="email"
             />
           </div>
 
@@ -38,10 +45,17 @@ const Contact = () => {
               id="message"
               name="message"
               rows="4"
+              required
+              aria-required="true"
+              autoComplete="off"
             ></textarea>
           </div>
 
-          <button type="submit" className={`btn ${styles.submitButton} `}>
+          <button
+            type="submit"
+            className={`btn ${styles.submitButton}`}
+            aria-label="Enviar mensaje de contacto"
+          >
             Enviar Mensaje
           </button>
         </form>

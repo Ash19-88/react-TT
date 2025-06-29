@@ -4,3 +4,208 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #b97a56;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #f8f9fa;
+}
+
+.cardBody {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.cardPrice {
+  color: #9c601a;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.addButton {
+  background: #d39865;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  transition: background 0.2s;
+}
+.addButton:hover,
+.addButton:focus {
+  background: #b97a56;
+  color: #fff;
+}
+
+.editButton {
+  background: #d39865;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+.editButton:hover,
+.editButton:focus {
+  background: #e2c9a0;
+  color: #b97a56;
+}
+
+.deleteButton {
+  background: #e84545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+.deleteButton:hover,
+.deleteButton:focus {
+  background: #b33030;
+  color: #fff;
+}
+
+.cancelButton {
+  background: #4b4a4a;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+.cancelButton:hover,
+.cancelButton:focus {
+  background: #7c7c7c;
+  color: #fcfafa;
+}
+
+.editButton,
+.deleteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.modalOverlay {
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalDialog {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+.modalContent {
+  background: #fff7f0;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(211,152,101,0.18);
+  padding: 0;
+  overflow: hidden;
+}
+.modalHeader {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f3e8d5;
+  background: #f3e8d5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modalTitle {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #b97a56;
+  font-weight: 600;
+}
+.modalBody {
+  padding: 1.5rem;
+}
+.modalFooter {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #f3e8d5;
+  background: #f3e8d5;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.icon {
+  margin-right: 6px;
+  vertical-align: middle;
+  font-size: 1em; 
+  display: inline-block;
+}
+
+.error{
+  color: #e84545;
+}
+
+.noResults {
+  color: #b97a56;
+  font-size: 1.1rem;
+  margin: 2rem 0;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}

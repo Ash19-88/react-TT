@@ -8,25 +8,31 @@ const CartItem = ({ item, increaseQuantity, decreaseQuantity, removeItem }) => {
         <img
           src={item.image}
           className={`d-block w-100 ${styles.productCartImage}`}
-          alt={item.title}
+          alt={item.title || item.name}
         />
-        <h2 className={styles.productCartTitle}>{item.title}</h2>
+        <h2 className={styles.productCartTitle}>{item.title || item.name}</h2>
       </td>
       <td className={styles.tableData}>${item.price}</td>
       <td className={styles.tableData}>
-        <button
-          onClick={() => decreaseQuantity(item.id)}
-          className={styles.quantityButton}
-        >
-          −
-        </button>
-        <span className={styles.quantityValue}>{item.quantity || 1}</span>
-        <button
-          onClick={() => increaseQuantity(item.id)}
-          className={styles.quantityButton}
-        >
-          +
-        </button>
+        <div className={styles.quantityControl} role="group" aria-label={`Cantidad de ${item.title || item.name}`}>
+          <button
+            onClick={() => decreaseQuantity(item.id)}
+            aria-label={`Disminuir cantidad de ${item.title || item.name}`}
+            className={styles.quantityButton}
+          >
+            −
+          </button>
+          <span className={styles.quantityValue} aria-live="polite">
+            {item.quantity || 1}
+          </span>
+          <button
+            onClick={() => increaseQuantity(item.id)}
+            aria-label={`Aumentar cantidad de ${item.title || item.name}`}
+            className={styles.quantityButton}
+          >
+            +
+          </button>
+        </div>
       </td>
       <td className={styles.tableData}>
         ${item.price * (item.quantity || 1)}
@@ -35,8 +41,9 @@ const CartItem = ({ item, increaseQuantity, decreaseQuantity, removeItem }) => {
         <button
           onClick={() => removeItem(item.id)}
           className={styles.trashButton}
+          aria-label={`Eliminar ${item.title || item.name} del carrito`}
         >
-          <BsTrash3 size={18} />
+          <BsTrash3 size={18} aria-hidden="true" />
         </button>
       </td>
     </tr>

@@ -15,7 +15,6 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Admin from "./components/admin/Admin";
 import NotFound from "./components/notfound/NotFound";
 
-
 function App() {
   return (
     <>

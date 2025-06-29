@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import CartProvider from "./providers/CartProvider";
 import AuthProvider from "./providers/AuthProvider";
+import ProductProvider from "./providers/ProductProvider";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -14,7 +15,9 @@ root.render(
     <Router>
       <AuthProvider>
         <CartProvider>
-          <App />
+          <ProductProvider>
+            <App />
+          </ProductProvider>
         </CartProvider>
       </AuthProvider>
     </Router>

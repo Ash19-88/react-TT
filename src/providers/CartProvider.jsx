@@ -3,9 +3,8 @@ import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 import CartContext from "../context/CartContext";
 
-
-export default function CartProvider({children}) {
-   const [items, setItems] = useState(() => {
+export default function CartProvider({ children }) {
+  const [items, setItems] = useState(() => {
     const storedItems = localStorage.getItem("cartItems");
     return storedItems ? JSON.parse(storedItems) : [];
   });
@@ -51,7 +50,7 @@ export default function CartProvider({children}) {
     );
   };
 
-   const removeItem = async (id) => {
+  const removeItem = async (id) => {
     const confirm = await Swal.fire({
       title: "¿Estás seguro?",
       text: "Esto eliminará el producto del carrito.",
@@ -68,9 +67,27 @@ export default function CartProvider({children}) {
     }
   };
 
-  const clearCart = () => {
+  const clearCart = async (showToast = true) => {
+    const confirm = await Swal.fire({
+      title: "¿Vaciar carrito?",
+      text: "Esto eliminará todos los productos del carrito.",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Sí, vaciar",
+      cancelButtonText: "Cancelar",
+    });
+
+    if (confirm.isConfirmed) {
+      setItems([]);
+      if (showToast) {
+        toast.info("Carrito vaciado");
+      }
+    }
+  };
+
+  /**Lo uso solo para simular el pago exitoso una vez que el usuario se logueó y vaciar el carrito */
+  const emptyCart = () => {
     setItems([]);
-    toast.info("Carrito vaciado");
   };
 
   const total = items.reduce(
@@ -87,7 +104,8 @@ export default function CartProvider({children}) {
         decreaseQuantity,
         removeItem,
         clearCart,
-        total
+        emptyCart,
+        total,
       }}
     >
       {children}
